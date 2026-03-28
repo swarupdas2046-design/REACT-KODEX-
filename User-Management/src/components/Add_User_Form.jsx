@@ -27,13 +27,12 @@ const Add_User_Form = ({setUserData,userData,setToggel,edit,setEdit}) => {
         setToggel(true)
         reset(); // after form submit the form will be reset 
     }
-  return (
+return (
     <div className='text-white h-fit w-full flex items-center justify-center flex-col gap-3'>
         <h1 className='text-4xl font-semibold text-amber-100'>Add  User</h1>
 
 
-        <form onSubmit={handleSubmit(HandelFormSubmit
-        )} className='border-2 bg-black border-amber-400 p-4 flex flex-col gap-4 w-[30%] rounded-2xl'>
+        <form onSubmit={handleSubmit(HandelFormSubmit)} className='border-2 bg-black border-amber-400 p-4 flex flex-col gap-4 w-[30%] rounded-2xl'>
 
             <input {...register("name",{required:'User Name is required'})} 
             className='border px-2 py-2 rounded-xl outline-0 font-medium text-xl' type="text" placeholder='Name' />
@@ -69,7 +68,7 @@ const Add_User_Form = ({setUserData,userData,setToggel,edit,setEdit}) => {
             <button disabled={!isValid} className={`py-2 rounded-2xl ${isValid?"bg-blue-700 active:scale-95 hover:bg-blue-800 cursor-pointer":"bg-gray-500 cursor-not-allowed hover:bg-gray-400"}`}>Add User</button>
         </form>
     </div>
-  )
+)
 }
 
 export default Add_User_Form
