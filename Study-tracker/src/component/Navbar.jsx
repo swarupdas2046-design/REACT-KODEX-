@@ -15,7 +15,7 @@ import { AllDataContext } from "../context/UserContext";
           setToggel((prev)=>!prev)
       }}
        className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-xl transition-all duration-300 shadow-md text-white active:scale-95 cursor-pointer">
-        <Plus size={18} /> {toggel?"Add Session":"Show Session"}
+        <Plus size={18} /> Add Session
       </button>
     </div>
   );
