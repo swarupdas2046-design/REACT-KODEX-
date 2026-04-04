@@ -36,11 +36,14 @@ const Navbar = () => {
         {menu ? <FaTimes /> : <FaBars />}
       </div>
 
-      <div
-        className={`  ${menu ? "opacity-100 transition-all ease-linear duration-300 rounded translate-y-2" : "opacity-0 transition-all ease-linear duration-300 rounded  -translate-y-2"} 
- 
- absolute md-hidden flex gap-5 flex-col justify-center items-center pl-5  w-full h-125 top-20 left-0 bg-white`}
-      >
+<div
+  className={`  
+    ${menu 
+      ? "opacity-100 pointer-events-auto translate-y-2" 
+      : "opacity-0 pointer-events-none -translate-y-2"
+    } 
+    absolute md:hidden flex gap-5 flex-col justify-center items-center pl-5 w-full h-125 top-20 left-0 bg-white transition-all duration-300`}
+>
         <NavLink
           to="/"
           className={({ isActive }) =>

@@ -30,7 +30,7 @@ useEffect(()=>{
         return <ProductCard key={elem.id} product={elem}  qnty={Productqantity ? Productqantity.qnty : 0}  />
         })}
     </div>
-  ) 
+) 
 } 
 
 export default Home
