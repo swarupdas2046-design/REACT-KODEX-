@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className="w-full flex items-center justify-between text-white bg-gray-700/40 z-50 backdrop-blur-md h-[10%] px-5 fixed top-0 ">
       <h3 className="text-3xl font-bold text-amber-950 capitalize">
-        Enterprice
+        Enterprise
       </h3>
       <div className=" hidden sm:flex gap-8 text-2xl font-semibold text-black">
         <NavLink
