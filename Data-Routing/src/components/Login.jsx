@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
-import { UserContext } from "../context/AllContext";
+import { useAuth } from "../context/AllContext";
 import { toast } from "react-toastify";
 const Login = () => {
-    let {registeredUser, setLoggedUser} = useContext(UserContext)
+    let {registeredUser, setLoggedUser} = useAuth()
     let navigate = useNavigate()
   let {
     register,
@@ -22,6 +22,7 @@ const Login = () => {
         setLoggedUser(findUser)
         toast.success('Login successful')
         localStorage.setItem('logged-user',JSON.stringify(findUser))
+        navigate('/dashboard')
     }else{
         toast.error('Login Failed')
         return
