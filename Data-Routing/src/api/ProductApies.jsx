@@ -1,8 +1,9 @@
 import axios from "axios";
+import { AxiosInstance } from "../config/Axiosintence";
 
 export let FetchProduct = async () => {
 try {
-    let res = await axios.get("https://dummyjson.com/products");
+    let res = await AxiosInstance.get("/products");
     console.log('api hitted');
     return res.data.products;
 } 

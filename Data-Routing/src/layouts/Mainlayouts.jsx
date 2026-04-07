@@ -6,7 +6,7 @@ const MainLayouts = () => {
   return (
     <div className='h-screen grid grid-cols-[1fr_6fr]'>
     <Navbar/>
-    <div className='p-3'>
+    <div className='p-6 overflow-auto h-full'>
     <Outlet/>
     </div>
     </div> 

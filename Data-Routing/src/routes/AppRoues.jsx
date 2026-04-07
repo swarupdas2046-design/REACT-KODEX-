@@ -10,6 +10,7 @@ import Register from "../components/Register";
 import ProtectedDashboard from "./ProtectedDashboard";
 import ProtectedAuth from "./ProtectedAuth";
 import { FetchProduct } from "../api/ProductApies";
+import ProductDetails from "../pages/ProductDetails";
 
 const AppRoues = () => {
 let router = createBrowserRouter([
@@ -38,6 +39,10 @@ let router = createBrowserRouter([
             path: "contact",
             element: <Contact />,
             },
+            {
+                path:'prodeuctdetails/:id',
+                element:<ProductDetails/>
+            }
         ],
         },
     ],
