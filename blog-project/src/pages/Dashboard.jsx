@@ -7,7 +7,7 @@ import { BsThreeDots } from "react-icons/bs";
 
 const Dashboard = () => {
   let navigate = useNavigate();
-  let { Blog, setBlog, logUser, Publish, Draft, setPublish, setDraft } = GetAuth();
+  let { Blog, setBlog, logUser, Publish, Draft, setPublish, setDraft, setToggle } = GetAuth();
   
   const [openMenuId, setOpenMenuId] = useState(null);
   
@@ -39,7 +39,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] text-white bg-black relative">
+    <div onClick={()=>setToggle(false)} className="min-h-[calc(100vh-4rem)] text-white bg-black relative">
       <div className="mx-auto max-w-5xl px-4 py-12 ">
         {/* Top Section */}
         <div className="flex justify-between items-start mb-8">

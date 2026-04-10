@@ -4,11 +4,11 @@ import { GoPersonFill } from "react-icons/go";
 import { FaRegCalendarDays } from "react-icons/fa6";
 import { Outlet, useNavigate, useParams } from "react-router";
 const Blog = () => {
-  let { Publish, logUser,date } = GetAuth();
+  let { Publish, logUser,date, setToggle } = GetAuth();
   let navigate = useNavigate();
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] bg-black text-white">
+    <div onClick={()=> setToggle(false)} className="min-h-[calc(100vh-4rem)] bg-black text-white">
       <div className="mx-auto max-w-5xl px-4 py-10">
         <section className="mb-15 text-center">
           <h1 className="text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl">

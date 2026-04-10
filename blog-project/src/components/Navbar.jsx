@@ -6,8 +6,8 @@ import { GetAuth } from '../context/AllContext';
 import { MdOutlineDashboard } from "react-icons/md";
 import { MdLogout } from "react-icons/md";
 const Navbar = () => {
-    const [toggle, setToggle] = useState(false)
-    let {logUser, setLogUser} = GetAuth()
+    
+    let {logUser, setLogUser,toggle, setToggle} = GetAuth()
     
     let navigate = useNavigate();
 return (
@@ -45,7 +45,10 @@ return (
                 <p className='font-sans text-gray-400 text-[13px]'>{logUser && logUser.email}</p>
                 <p className='text-gray-400 text-[13px]'>{ logUser && logUser.accountType}</p>
             </div>
-            <div onClick={() => navigate('/dashboard')} className={`${logUser && logUser.accountType=='author'?'py-2 px-4 flex items-center gap-1.5 hover:bg-[#007E69]/50 border-b border-gray-400':'hidden'}  `}>
+            <div onClick={() => {
+                navigate('/dashboard')
+                setToggle(false)
+            }} className={`${logUser && logUser.accountType=='author'?'py-2 px-4 flex items-center gap-1.5 hover:bg-[#007E69]/50 border-b border-gray-400':'hidden'}  `}>
                 <MdOutlineDashboard /> Dashboard
             </div>
             <div onClick={()=>{
