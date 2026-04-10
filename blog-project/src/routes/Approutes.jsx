@@ -1,6 +1,5 @@
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router' // Ensure 'react-router-dom' is imported correctly
-import Default from '../layouts/Default'
+import { createBrowserRouter, RouterProvider } from 'react-router' 
 import Blog from '../pages/Blog'
 import Login from '../components/Login'
 // import Register from '../components/register'
@@ -9,7 +8,7 @@ import Dashboard from '../pages/Dashboard'
 import BlogForm from '../components/BlogForm'
 import ProtectedDashboard from '../layouts/ProtectedDashboard'
 import BlogDetails from '../components/BlogDetails'
-
+import Default from '../layouts/Default'
 const Approutes = () => {
 
     let router = createBrowserRouter([

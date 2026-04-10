@@ -45,7 +45,7 @@ const BlogDetails = () => {
             {/* Author */}
             <div className="flex items-center gap-2">
               <FiUser className="text-[16px]" />
-              <span className="font-medium text-gray-300">{logUser.Name}</span>
+              <span className="font-medium text-gray-300">{data.AuthorName}</span>
             </div>
             
             {/* Date */}
