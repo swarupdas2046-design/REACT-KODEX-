@@ -10,7 +10,7 @@ const Navbar = () => {
   let dispatch = useDispatch()
  let {Theme} = useSelector((store)=>store.HoleCart)
   return (
-    <div className=' bg-gray-700 text-white h-[10%] px-7 flex items-center justify-between'>
+    <div className=' bg-gray-700 text-white h-20  px-7 flex items-center justify-between'>
         <h1 className='font-bold text-3xl'>Logo</h1>
         <div className='hidden md:flex gap-8'>
             <NavLink className={({isActive})=>isActive?'text-2xl font-semibold hover:underline text-amber-400':'text-2xl font-semibold'} to='/'>Home</NavLink>
